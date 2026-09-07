@@ -1,0 +1,12 @@
+/* CSS de Configurações Globais */
+@import url('global/normalize.css');
+@import url('global/variables.css');
+@import url('global/font.css');
+
+/* CSS da Interface de Usuário */
+@import url('components/header.css');
+@import url('components/main.css');
+@import url('components/ui/button/buttonCalc.css');
+@import url('components/ui/button/buttonPay.css');
+@import url('components/ui/icons.css');
+@import url('components/ui/images.css');

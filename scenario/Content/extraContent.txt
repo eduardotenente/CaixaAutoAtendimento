@@ -1,0 +1,7 @@
+### Desafios extras
+
+- Permitir que o cliente compre mais de um produto na mesma operação.
+- Criar diferentes faixas de desconto.
+- Exibir a quantidade total de itens comprados.
+- Criar uma opção para cancelar a compra.
+- Adicionar uma forma de pagamento e calcular o troco.

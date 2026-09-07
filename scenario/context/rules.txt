@@ -1,0 +1,7 @@
+### Regras de funcionamento
+
+- Uma opção inválida não poderá ser processada como produto.
+- Uma quantidade inválida deverá gerar uma mensagem adequada.
+- O desconto deverá ser aplicado somente quando a compra atingir a condição estabelecida pelo sistema.
+- Após finalizar uma compra, o usuário deverá poder iniciar outra sem precisar recarregar a página.
+- O sistema deverá informar claramente subtotal, desconto e total.

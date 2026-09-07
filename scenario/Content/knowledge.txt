@@ -1,0 +1,16 @@
+### Conhecimentos obrigatórios
+
+- let;
+- const;
+- var;
+- tipos de dados;
+- operadores aritméticos;
+- operadores relacionais e de comparação;
+- operadores lógicos;
+- if;
+- else;
+- condições compostas;
+- while;
+- do while;
+- funções tradicionais;
+- operador ternário.

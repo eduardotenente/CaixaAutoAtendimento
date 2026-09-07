@@ -1,0 +1,11 @@
+###Interface
+
+A aplicação deverá possuir:
+
+- título;
+- lista de produtos;
+- campo para escolha do produto;
+- campo para quantidade;
+- botão para calcular;
+- área para apresentar o resultado;
+- botão ou mecanismo para iniciar uma nova compra.

@@ -1,0 +1,9 @@
+### Validações
+
+Validar:
+
+- produto escolhido;
+- quantidade;
+- valores numéricos;
+- opções do usuário;
+- tentativa de realizar operações com dados inválidos.

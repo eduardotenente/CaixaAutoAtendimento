@@ -1,0 +1,25 @@
+### Objetivo
+
+- Desenvolver uma pequena aplicação de autoatendimento capaz de receber informações do usuário, realizar cálculos e tomar decisões de acordo com as opções escolhidas.
+
+
+
+### Contexto
+- Uma pequena loja deseja disponibilizar um sistema simples de autoatendimento para que o cliente possa consultar produtos, calcular uma compra e verificar possíveis descontos.
+
+
+
+### O que o sistema deve fazer: 
+
+- Apresentar opções de produtos.
+- Permitir que o usuário escolha um produto.
+- Solicitar a quantidade desejada.
+- Calcular o subtotal.
+- Aplicar regras de desconto de acordo com o valor da compra.
+- Informar o valor final.
+- Permitir realizar uma nova compra.
+- Exibir mensagens diferentes para situações como:
+        produto inexistente;
+        quantidade inválida;
+        compra sem desconto;
+        compra com desconto.

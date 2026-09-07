@@ -1,0 +1,8 @@
+### Requisitos
+
+- O sistema deverá possuir pelo menos 5 produtos.
+- Cada produto deverá possuir um preço.
+- O usuário deverá informar a opção desejada.
+- O sistema deverá impedir quantidades iguais ou inferiores a zero.
+- O valor final deverá considerar o desconto quando aplicável.
+- O sistema deverá continuar funcionando enquanto o usuário desejar realizar novas compras.
