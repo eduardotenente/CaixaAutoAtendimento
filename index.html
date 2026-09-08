@@ -24,9 +24,10 @@
             <h2>Bem-vindo(a)!</h2>
             <p>Aqui você pode consultar nossos produtos, calcular sua compra e aproveitar nossos descontos.</p>
         </section>
+
         <section id="product-section">
-            <h2>Nossos Produtos</h2>
-            <div class="product_list">
+            <h3>Nossos Produtos</h3>
+            <form id="form-list">
                  <label for="product-1"><!-- Refrigerante --></label>
                  <input type="radio" name="product" id="product-1">
                  <label for="product-2"><!-- Água --></label>
@@ -37,12 +38,192 @@
                  <input type="radio" name="product" id="product-4">
                  <label for="product-5"><!-- Sorvete --></label>
                  <input type="radio" name="product" id="product-5">
-            </div>
-            <div class="product_info">
+                 <button type="button" id="submit-product" class="button">
+                     <span class="button__text">Escolher</span>
+                     <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                 </button>
+            </form>
+            <aside class="product_info">
                 <!-- ICONE -->
                 <p id="info">Selecione um produto para continuar.</p>
-                <button id="submit-product">Escolher Produto</button>
-            </div>
+            </aside>
+        </section>
+
+        <section id="select-section">
+            <aside>
+                <!-- ICONE -->
+                <h3>Produto Selecionado</h3>
+            </aside>
+            <aside class="default">
+                <!-- ICONE -->
+                <p>Nenhum produto selecionado.</p>
+                <p>Escolha um produto da lista.</p>
+            </aside>
+            <aside id="product-select">
+                <div class="product-info-selected">
+                    <!-- ICONE PRODUTO -->
+                    <p>
+                        <span class="product-name"></span>
+                        <span class="product-price"></span>
+                    </p>
+                </div>
+                <form id="calculator-form">
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                    <button type="submit" class="button">
+                        <span class="button__text">Calcular</span>
+                        <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                    </button>
+                </form>
+            </aside>
+        </section>
+
+        <section id="discount-section">
+            <aside>
+                <!-- ICONE -->
+                <h3>Desconto</h3>
+            </aside>
+            <aside class="default">
+                <!-- ICONE -->
+                <p>Nenhum desconto aplicado.</p>
+                <p>Escolha um produto da lista e clique em "calcular" para ver o desconto.</p>
+            </aside>
+            <aside id="discount-content">
+                <!-- ICONE -->
+                 <div>
+                    <h4 id="situation"></h4>
+                    <p id="situation-info"></p>
+                 </div>
+            </aside>
+        </section>
+
+        <section id="resume-section">
+            <aside>
+                <!-- ICONE -->
+                <h3>Resumo da Compra</h3>
+            </aside>
+            <aside class="default">
+                <!-- ICONE -->
+                <p>Nenhum produto calculado.</p>
+                <p>Escolha um produto da lista e clique em "calcular" para ver o resumo.</p>
+            </aside>
+            <table id="resume-table">
+                <tr>
+                    <th>Produto</th>
+                    <th>Qtd.</th>
+                    <th>Valor Unit.</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td class="product-name"></td>
+                    <td id="product-quantity"></td>
+                    <td class="product-price"></td>
+                    <td id="product-total"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Subtotal</th>
+                    <td id="subtotal"></td>
+                </tr>
+                <tr>
+                    <th>Desconto</th>
+                    <td id="discount"></td>
+                </tr>
+            </table>
+            <aside>
+                <h3>Total</h3>
+                <h3 id="total"></h3>
+            </aside>
+            <button type="button" class="pay-btn" id="pay-button">
+                <span class="btn-text">Pagar</span>
+                <div class="icon-container">
+                    <svg viewBox="0 0 24 24" class="icon card-icon">
+                    <path
+                        d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18C2,19.11 2.89,20 4,20H20C21.11,20 22,19.11 22,18V6C22,4.89 21.11,4 20,4Z"
+                        fill="currentColor"
+                    ></path>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="icon payment-icon">
+                    <path
+                        d="M2,17H22V21H2V17M6.25,7H9V6H6V3H18V6H15V7H17.75L19,17H5L6.25,7M9,10H15V8H9V10M9,13H15V11H9V13Z"
+                        fill="currentColor"
+                    ></path>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="icon dollar-icon">
+                    <path
+                        d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+                        fill="currentColor"
+                    ></path>
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="icon wallet-icon default-icon">
+                    <path
+                        d="M21,18V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V6H12C10.89,6 10,6.9 10,8V16A2,2 0 0,0 12,18M12,16H22V8H12M16,13.5A1.5,1.5 0 0,1 14.5,12A1.5,1.5 0 0,1 16,10.5A1.5,1.5 0 0,1 17.5,12A1.5,1.5 0 0,1 16,13.5Z"
+                        fill="currentColor"
+                    ></path>
+                    </svg>
+
+                    <svg viewBox="0 0 24 24" class="icon check-icon">
+                    <path
+                        d="M9,16.17L4.83,12L3.41,13.41L9,19L21,7L19.59,5.59L9,16.17Z"
+                        fill="currentColor"
+                    ></path>
+                    </svg>
+                </div>
+            </button>
+        </section> 
+
+        <section id="details-section">
+            <aside>
+                <!-- ICONE -->
+                <h3>Detalhes do Pagamento</h3>
+            </aside>
+            <aside class="default">
+                <!-- ICONE -->
+                <p>Nenhum pagamento realizado.</p>
+                <p>Compre um produto para ver os detalhes do pagamento.</p>
+            </aside>
+            <aside id="details-content">
+                <div class="details-subcontainer">
+                    <p>
+                        Itens comprados: 
+                        <span id="items-count">0</span>
+                    </p>
+                    <p>
+                        Valor do Desconto: R$ 
+                        <span id="discount-value">0,00</span>
+                    </p>
+                </div>
+                <div class="subcontainer">
+                    <p>
+                        Subtotal: R$ 
+                        <span id="unit-value">0,00</span>
+                    </p>
+                    <p>
+                        Valor Total: R$ 
+                        <span id="total-value">0,00</span>
+                    </p>
+                </div>
+            </aside>
+        </section>
+
+        <section id="flow-section">
+            <aside id="flow-info">
+                <!-- ICONE -->
+                 <h3>Deseja realizar uma nova compra?</h3>
+                 <p>Você pode continuar comprando sem precisar recarregar a página.</p>
+            </aside>
+            <aside class="buttons-flow">
+                <button type="button" id="new-purchase" class="button">
+                    <span class="button__text">Nova Compra</span>
+                    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                </button>
+                <button type="button" id="exit" class="button">
+                    <span class="button__text">Sair</span>
+                    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                </button>
+            </aside>
         </section>
     </main>
 </body>
