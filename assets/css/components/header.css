@@ -1,0 +1,23 @@
+header {
+    background-color: var(--bg-primaryHeader-color);
+    color: var(--title-color);
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    border: 1px solid var(--bg-secondaryHeader-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#nav-data-container {
+    background-color: var(--bg-secondaryHeader-color);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 10px;
+    margin-right: 1.5rem;
+}

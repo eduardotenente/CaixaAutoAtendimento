@@ -13,5 +13,18 @@ body {
     width: 100%;
     min-height: 100dvh;
     overflow-x: hidden;
-    
+}
+
+h1 {
+    font-size: 1.30rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.10rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 0.90rem;
 }
