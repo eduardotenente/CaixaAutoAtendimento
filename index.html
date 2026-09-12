@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoAtendimento</title>
     <link rel="stylesheet" href="assets/css/index.css">
-    <script src="assets/js/calc.js" defer></script>
-    <script src="assets/js/dom.js" defer></script>
+    <script type="module" src="assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -37,18 +36,18 @@
                 <img src="assets/media/images/icons/caixa.png" alt="Caixa">
                 <h3>Nossos Produtos</h3>
             </aside>
-            <form id="form-list">
+            <form id="form-list" method="post">
                  <label for="product-1"><img src="assets/media/images/icons/refrigerante.png" alt="Refrigerante"></label>
-                 <input type="radio" name="product" id="product-1">
+                 <input type="radio" name="product" id="product-1" value="Refrigerante" class="product-item">
                  <label for="product-2"><img src="assets/media/images/icons/agua.png" alt="Água"></label>
-                 <input type="radio" name="product" id="product-2">
+                 <input type="radio" name="product" id="product-2" value="Água" class="product-item">
                  <label for="product-3"><img src="assets/media/images/icons/biscoitos.png" alt="Biscoito"></label>
-                 <input type="radio" name="product" id="product-3">
+                 <input type="radio" name="product" id="product-3" value="Biscoito" class="product-item">
                  <label for="product-4"><img src="assets/media/images/icons/chocolate.png" alt="Chocolate"></label>
-                 <input type="radio" name="product" id="product-4">
+                 <input type="radio" name="product" id="product-4" value="Chocolate" class="product-item">
                  <label for="product-5"><img src="assets/media/images/icons/casquinha.png" alt="Sorvete"></label>
-                 <input type="radio" name="product" id="product-5">
-                 <button type="button" id="submit-product" class="button">
+                 <input type="radio" name="product" id="product-5" value="Sorvete" class="product-item">
+                 <button type="submit" id="submit-product" class="button">
                      <span class="button__text">Escolher</span>
                      <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
                  </button>
