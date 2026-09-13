@@ -2,3 +2,8 @@ import './header/date.js';
 import './contentJS/product.js';
 import './contentJS/select.js';
 import './calcJS/calc.js';
+import './contentJS/discount.js';
+import './contentJS/resume.js';
+import './contentJS/details.js';
+import './productsValue.js';
+import './noEvent.js';
