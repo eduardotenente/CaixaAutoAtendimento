@@ -9,8 +9,8 @@ productList.addEventListener("submit", (event) => {
   const productSelected = document.querySelector('input[name="product"]:checked');   
 
   if (productSelected) {
-    const productName = productSelected.value;
-    alert(`Você selecionou o produto: ${productName}`);
+    const product = productSelected.value;
+    alert(`Você selecionou o produto: ${product}`);
 
     historicProduct.push(productName);
     console.log("Produtos salvos no vetor:", historicProduct);
@@ -19,4 +19,4 @@ productList.addEventListener("submit", (event) => {
   }
 });
 
-// EXPORTE O PRODUCTO SELECIONADO PARA O ARQUIVO SELECT.JS
+// EXPORTE o produto selecionado para o arquivo select.js | productsValue.js
