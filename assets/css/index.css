@@ -3,10 +3,13 @@
 @import url('global/variables.css');
 @import url('global/font.css');
 
+/* CSS Estrutural Página de Compra */
+@import url('components/purchase/header-purchase.css');
+@import url('components/purchase/main-purchase.css');
+@import url('components/purchase/welcome-purchase.css');
+
 /* CSS da Interface de Usuário */
-@import url('components/header.css');
-@import url('components/main.css');
-@import url('components/ui/button/buttonCalc.css');
-@import url('components/ui/button/buttonPay.css');
-@import url('components/ui/icons.css');
-@import url('components/ui/images.css');
+@import url('ui/purchase-ui/buttonCalc.css');
+@import url('ui/purchase-ui/buttonPay.css');
+@import url('ui/purchase-ui/icons.css');
+@import url('ui/purchase-ui/images.css');
