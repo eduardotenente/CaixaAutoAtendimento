@@ -33,3 +33,9 @@ nav {
     gap: 5px;
     font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+    #nav-data-container {
+        display: none;
+    }
+}

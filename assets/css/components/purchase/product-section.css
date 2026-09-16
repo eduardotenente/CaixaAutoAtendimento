@@ -7,7 +7,7 @@
     border: 1px solid var(--text-color);
     border-radius: 10px;
 
-    width: 500rem;
+    width: 100%;
     height: 400px;
 }
 
@@ -29,3 +29,9 @@
     BORDA NO RADIO
     ESPAÇAMENTO E TAMANHO NA INFORMAÇÃO
 */
+
+@media screen and (max-width: 768px) {
+    #product-section {
+
+    }
+}

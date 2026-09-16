@@ -17,11 +17,20 @@ body {
 h1 {
     font-size: 1.60rem;
     font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.3rem;
+    }
 }
 
 h2 {
     font-size: 1.30rem;
     font-weight: bold;
+    @media screen and (max-width: 768px) {
+        nav h2 {
+            font-size: 1rem;
+        }
+    }
 }
 
 h3 {
@@ -30,6 +39,10 @@ h3 {
 
 p {
     font-size: 0.90rem;
+
+    @media screen and (max-width: 768px) {
+        
+    }
 }
 
 .title_container {
