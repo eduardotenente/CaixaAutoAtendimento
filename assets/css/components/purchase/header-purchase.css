@@ -1,5 +1,6 @@
 header {
-    background-color: var(--bg-primaryHeader-color);
+    background: var(--bg-primaryHeader-color) url(../../../media/images/background/fundo-deitado.jpe) center center no-repeat;
+    background-size: cover;
     color: var(--title-color);
     display: flex;
     justify-content: space-between;

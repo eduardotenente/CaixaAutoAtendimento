@@ -1,0 +1,20 @@
+#welcome-section {
+    background: var(--bg-primaryHeader-color) url(../../../media/images/background/fundo-emPé.jpe) center center no-repeat;
+    background-size: cover;
+    color: var(--title-color);
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px;
+    gap: 15px;
+    border-radius: 10px;
+    min-width: 250px;
+    max-height: 300px;
+}
+
+#welcome-section p {
+    line-height: 20px;
+}

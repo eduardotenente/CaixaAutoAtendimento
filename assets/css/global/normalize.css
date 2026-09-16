@@ -12,19 +12,30 @@ html, body {
 body {
     width: 100%;
     min-height: 100dvh;
-    overflow-x: hidden;
 }
 
 h1 {
-    font-size: 1.30rem;
+    font-size: 1.60rem;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 1.10rem;
+    font-size: 1.30rem;
     font-weight: bold;
+}
+
+h3 {
+    font-size: 1.10rem;
 }
 
 p {
     font-size: 0.90rem;
+}
+
+.title_container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    text-align: left;
+    gap: 15px;
 }

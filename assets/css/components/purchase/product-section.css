@@ -1,0 +1,31 @@
+#product-section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+
+    width: 500rem;
+    height: 400px;
+}
+
+#form-list {
+    display: flex;
+    flex-flow: column nowrap
+}
+
+.product_info {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* 
+    COLOCAR NOME DOS PRODUTOS,
+    COLOCAR ">",
+    COLOCAR PREÇO  
+    BORDA NO ICON
+    BORDA NO RADIO
+    ESPAÇAMENTO E TAMANHO NA INFORMAÇÃO
+*/

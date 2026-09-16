@@ -7,9 +7,10 @@
 @import url('components/purchase/header-purchase.css');
 @import url('components/purchase/main-purchase.css');
 @import url('components/purchase/welcome-purchase.css');
+@import url('components/purchase/product-section.css');
 
 /* CSS da Interface de Usuário */
 @import url('ui/purchase-ui/buttonCalc.css');
 @import url('ui/purchase-ui/buttonPay.css');
-@import url('ui/purchase-ui/icons.css');
-@import url('ui/purchase-ui/images.css');
+@import url('ui/purchase-ui/icons-purchase.css');
+@import url('ui/purchase-ui/images-purchase.css');
