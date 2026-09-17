@@ -2,36 +2,105 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    text-align: center;
-
     border: 1px solid var(--text-color);
     border-radius: 10px;
-
     width: 100%;
-    height: 400px;
+    min-height: 400px;
 }
 
 #form-list {
     display: flex;
-    flex-flow: column nowrap
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.product-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 3.5rem;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    cursor: pointer;
+    
+}
+
+.product-item {
+    appearance: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 1px solid var(--bg-card-border);
+    border-radius: 10px;
+    background-color: var(--bg-body);
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.product-item:hover,
+.product-item:checked {
+    border-color: var(--accent-blue);
+    background-color: var(--bg-light-blue);
+}
+
+.product-item:checked {
+    border-width: 2px;
+}
+
+.product-item:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+.product-option img,
+.product-option__name {
+    position: relative;
+    pointer-events: none;
+}
+
+.product-option img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+
+.product-option__name {
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+    min-width: 0;
+}
+
+.product-item:checked ~ .product-option__name {
+    font-weight: 500;
+}
+
+#submit-product {
+    margin: auto;
 }
 
 .product_info {
+    color: var(--text-color);
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
+    font-weight: 500;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+#info {
+    margin-left: 3%;
 }
 
 /* 
-    COLOCAR NOME DOS PRODUTOS,
-    COLOCAR ">",
-    COLOCAR PREÇO  
-    BORDA NO ICON
-    BORDA NO RADIO
+    COLOCAR ">",  
     ESPAÇAMENTO E TAMANHO NA INFORMAÇÃO
+    <dialog> PARA O JS
 */
-
-@media screen and (max-width: 768px) {
-    #product-section {
-
-    }
-}

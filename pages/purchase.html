@@ -38,15 +38,40 @@
             </aside>
             <form id="form-list" method="post">
                 
-                 <label for="product-1"><img src="../assets/media/images/icons/refrigerante.png" alt="Refrigerante"><input type="radio" name="product" id="product-1" value="Refrigerante" class="product-item"></label>
+                 <label class="product-option" for="product-1">
+                     <input type="radio" name="product" id="product-1" value="Refrigerante" class="product-item">
+                     <img src="../assets/media/images/icons/refrigerante.png" alt="">
+                     <span class="product-option__name">Refrigerante</span>
+                     <span class="product-option__name">(R$ 4,00)</span>
+                 </label>
                  
-                 <label for="product-2"><img src="../assets/media/images/icons/agua.png" alt="Água"><input type="radio" name="product" id="product-2" value="Água" class="product-item"></label>
+                 <label class="product-option" for="product-2">
+                     <input type="radio" name="product" id="product-2" value="Água" class="product-item">
+                     <img src="../assets/media/images/icons/agua.png" alt="">
+                     <span class="product-option__name">Água</span>
+                     <span class="product-option__name">(R$ 3,50)</span>
+                 </label>
                  
-                 <label for="product-3"><img src="../assets/media/images/icons/biscoitos.png" alt="Biscoito"><input type="radio" name="product" id="product-3" value="Biscoito" class="product-item"></label>
+                 <label class="product-option" for="product-3">
+                     <input type="radio" name="product" id="product-3" value="Biscoito" class="product-item">
+                     <img src="../assets/media/images/icons/biscoitos.png" alt="">
+                     <span class="product-option__name">Biscoito</span>
+                     <span class="product-option__name">(R$ 5,00)</span>
+                 </label>
                  
-                 <label for="product-4"><img src="../assets/media/images/icons/chocolate.png" alt="Chocolate"><input type="radio" name="product" id="product-4" value="Chocolate" class="product-item"></label>
+                 <label class="product-option" for="product-4">
+                     <input type="radio" name="product" id="product-4" value="Chocolate" class="product-item">
+                     <img src="../assets/media/images/icons/chocolate.png" alt="">
+                     <span class="product-option__name">Chocolate</span>
+                     <span class="product-option__name">(R$ 10,00)</span>
+                 </label>
                  
-                 <label for="product-5"><img src="../assets/media/images/icons/casquinha.png" alt="Sorvete"><input type="radio" name="product" id="product-5" value="Sorvete" class="product-item"></label>
+                 <label class="product-option" for="product-5">
+                     <input type="radio" name="product" id="product-5" value="Sorvete" class="product-item">
+                     <img src="../assets/media/images/icons/casquinha.png" alt="">
+                     <span class="product-option__name">Sorvete</span>
+                     <span class="product-option__name">(R$ 3,00)</span>
+                 </label>
                  
                  <button type="submit" id="submit-product" class="button">
                      <span class="button__text">Escolher</span>
@@ -54,14 +79,14 @@
                  </button>
             </form>
             <aside class="product_info">
-                <img src="../assets/media/images/icons/informacao-azul.png" alt="Informação">
+                <img src="../assets/media/images/icons/informacao-azul.png" alt="Informação" class="information_icon">
                 <p id="info">Selecione um produto para continuar.</p>
             </aside>
         </section>
 
         <section id="select-section">
-            <aside>
-                <img src="../assets/media/images/icons/selecionado.png" alt="Selecionado">
+            <aside class="title_container">
+                <img src="../assets/media/images/icons/selecionado.png" alt="Selecionado" class="icon-section">
                 <h3>Produto Selecionado</h3>
             </aside>
             <aside class="default">
@@ -89,8 +114,8 @@
         </section>
 
         <section id="discount-section">
-            <aside>
-                <img src="../assets/media/images/icons/mensagem.png" alt="Mensagem">
+            <aside class="title_container">
+                <img src="../assets/media/images/icons/mensagem.png" alt="Mensagem" class="icon-section">
                 <h3>Desconto</h3>
             </aside>
             <aside class="default">
@@ -108,8 +133,8 @@
         </section>
 
         <section id="resume-section">
-            <aside>
-                <img src="../assets/media/images/icons/carrinho.svg" alt="carrinho de compras">
+            <aside class="title_container">
+                <img src="../assets/media/images/icons/carrinho.svg" alt="carrinho de compras" class="icon-section">
                 <h3>Resumo da Compra</h3>
             </aside>
             <aside class="default">
@@ -190,8 +215,8 @@
         </section> 
 
         <section id="details-section">
-            <aside>
-                <img src="../assets/media/images/icons/detalhes.png" alt="Detalhes do Pagamento">
+            <aside class="title_container">
+                <img src="../assets/media/images/icons/detalhes.png" alt="Detalhes do Pagamento" class="icon-section">
                 <h3>Detalhes do Pagamento</h3>
             </aside>
             <aside class="default">
@@ -225,7 +250,7 @@
 
         <section id="flow-section">
             <aside id="flow-info">
-                <img src="../assets/media/images/icons/repetir.png" alt="Repetir Compra">
+                <img src="../assets/media/images/icons/repetir.png" alt="Repetir Compra" >
                  <h3>Deseja realizar uma nova compra?</h3>
                  <p>Você pode continuar comprando sem precisar recarregar a página.</p>
             </aside>
