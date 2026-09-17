@@ -54,3 +54,10 @@ p {
     gap: 15px;
     margin-top: 5%;
 }
+
+#welcome-section,
+#product-section,
+#select-section,
+#discount-section {
+    min-height: 450px;
+}
