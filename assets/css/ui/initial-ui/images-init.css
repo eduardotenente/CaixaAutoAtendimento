@@ -1,0 +1,55 @@
+/* Imagem do Hero */
+.hero-image-wrapper {
+  flex: 1 1 45%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 580px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
+}
+
+.category-image-wrapper {
+  width: 100%;
+  height: 130px;
+  background-color: #F8FAFC;
+  overflow: hidden;
+}
+
+.category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-img {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .hero-image-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: 240px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .category-image-wrapper {
+    height: 160px;
+  }
+}

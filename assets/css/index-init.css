@@ -1,0 +1,15 @@
+/* CSS Padrão do Corpo da Página Inicial */
+@import url('global/normalize-init.css');
+@import url('global/font.css');
+@import url('global/variables.css');
+
+/* CSS Estrutural da Página Inicial  */
+@import url('components/initial/header-init.css');
+@import url('components/initial/hero-section.css');
+@import url('components/initial/feature-section.css');
+@import url('components/initial/category-section.css');
+
+/* CSS da Interface de Usuário da Página Inicial */
+@import url('ui/initial-ui/button-init.css');
+@import url('ui/initial-ui/icons-init.css');
+@import url('ui/initial-ui/images-init.css');
