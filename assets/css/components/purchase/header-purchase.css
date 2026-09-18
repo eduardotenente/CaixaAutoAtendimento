@@ -35,7 +35,7 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-    #nav-data-container {
+    #nav-data-container, #nav-icon {
         display: none;
     }
 }

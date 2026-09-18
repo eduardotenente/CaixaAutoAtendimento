@@ -10,11 +10,15 @@
 
     padding: 30px;
     gap: 15px;
-    border-radius: 10px;
     min-width: 250px;
     max-height: 300px;
+
+    @media screen and (max-width: 768px) {
+        min-height: 350px;
+    }
 }
 
 #welcome-section p {
     line-height: 20px;
+    font-size: 1rem;
 }
