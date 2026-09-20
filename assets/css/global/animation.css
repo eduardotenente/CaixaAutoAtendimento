@@ -1,0 +1,116 @@
+/* ==========================================================================
+   NAVBAR: EFEITO HOVER E ITEM ATIVO
+   ========================================================================== */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  /* Cor base dos links */
+  color: var(--text-color, #A7C0DF);
+  transition: color 0.3s ease;
+}
+
+/* Linha inferior azul (pseudo-elemento ::after) */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #38BDF8; /* Azul claro de destaque */
+  border-radius: 2px;
+  
+  /* Inicia recolhida no centro */
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito ao passar o mouse */
+.nav-link:hover {
+  color: #38BDF8; /* Texto em azul claro */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* Expande a barra horizontalmente */
+}
+
+
+/* ==========================================================================
+   KEYFRAMES E CLASSES DE ANIMAÇÃO DE ENTRADA
+   ========================================================================== */
+
+/* Animação que sobe suavemente enquanto ganha opacidade */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação de entrada lateral (esquerda para direita) */
+
+.animate-entryLeft {
+    animation: fadeInLeft 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade {
+    animation: fadeIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Animação simples de fade */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Elementos animados diretamente no carregamento da página */
+.animate-entry {
+  animation: fadeInUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Elementos preparados para animação via Scroll (JavaScript) */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Estado acionado pelo JavaScript quando o elemento entra na tela */
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efeito cascata / stagger para cards ou listas */
+.delay-1 { transition-delay: 0.1s; animation-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; animation-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; animation-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; animation-delay: 0.4s; }

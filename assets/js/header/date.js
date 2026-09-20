@@ -7,14 +7,8 @@ const hour = date.getHours();
 const minutes = date.getMinutes();
 const navData = document.querySelector('#nav-data');
 
-if(hour < 10) {
+if (hour < 10 || minutes < 10) {
     navData.innerHTML = `<p style="font-size: 1.2rem;">0${hour}:0${minutes}</p>`;
-} else {
-    navData.innerHTML = `<p style="font-size: 1.2rem;">${hour}:0${minutes}</p>`;
-}
-
-if (minutes < 10) {
-    navData.innerHTML = `<p style="font-size: 1.2rem;">${hour}:0${minutes}</p>`;
 } else {
     navData.innerHTML = `<p style="font-size: 1.2rem;">${hour}:${minutes}</p>`;
 }

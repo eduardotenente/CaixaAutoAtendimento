@@ -13,3 +13,6 @@
 @import url('ui/initial-ui/button-init.css');
 @import url('ui/initial-ui/icons-init.css');
 @import url('ui/initial-ui/images-init.css');
+
+/* CSS das Animações */
+@import url('global/animation.css');

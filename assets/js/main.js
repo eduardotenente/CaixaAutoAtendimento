@@ -5,5 +5,6 @@ import './calcJS/calc.js';
 import './contentJS/discount.js';
 import './contentJS/resume.js';
 import './contentJS/details.js';
-import './productsValue.js';
-import './noEvent.js';
+import './utilities/productsValue.js';
+import './utilities/noEvent.js';
+import './utilities/scroll.js';
