@@ -1,5 +1,6 @@
-const select = require('./../contentJS/product');
-const products = [ 
+// import { selected } from './../contentJS/product';
+
+export const products = [ 
     { name: "refrigerante", price: 4.00, image: "././media/images/icons/refrigerante.png" }, 
     { name: "água", price: 3.50, image: "././media/images/icons/agua.png" },
     { name: "biscoito", price: 5.00, image: "././media/images/icons/biscoitos.png" }, 
@@ -13,15 +14,9 @@ const products = [
      separadamente em uma variável para exportar para o arquivo details.
     */
    for(let pos in products) { 
-       if(select.productSelected.value == products[pos].name && select.productSelected.value == products[pos].price) {
+       if(selected.value == products[pos].name && selected.value == products[pos].price) {
          const unitValue = products[pos].price; // EXPORTE para select.js | resume.js
          const productName = products[pos].name; // EXPORTE para select.js | resume.js
        };
    }
 })()
-
-module.exports = {
-    unitValue,
-    productName,
-    products
-}

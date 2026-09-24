@@ -1,7 +1,7 @@
 // Product Section
-const historicProduct = [];
+export let selected = null;
+export const historicProduct = [];
 const productList = document.querySelector("#form-list");
-const productItems = document.querySelectorAll(".product-item");
 const choice = document.querySelector("#submit-product");
 
 productList.addEventListener("submit", (event) => {
@@ -10,10 +10,10 @@ productList.addEventListener("submit", (event) => {
 
   if (productSelected) {
     const product = productSelected.value;
-    exports = productSelected;
+    selected = product;
     alert(`Você selecionou o produto: ${product}`);
 
-    historicProduct.push(productName);
+    historicProduct.push(product);
     console.log("Produtos salvos no vetor:", historicProduct);
   } else {
     alert("Por favor, selecione um produto antes de enviar.");
