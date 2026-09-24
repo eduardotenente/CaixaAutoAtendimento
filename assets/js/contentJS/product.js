@@ -10,6 +10,7 @@ productList.addEventListener("submit", (event) => {
 
   if (productSelected) {
     const product = productSelected.value;
+    exports = productSelected;
     alert(`Você selecionou o produto: ${product}`);
 
     historicProduct.push(productName);
