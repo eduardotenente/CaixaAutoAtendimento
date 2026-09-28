@@ -1,27 +1,43 @@
 // Product Section
 export let selected = null;
 export const historicProduct = [];
-const productList = document.querySelector("#form-list");
-const modalOverlay = document.getElementById('modalOverlay');
+const modalSucess = document.getElementById('modalSucess');
+const modalError = document.getElementById('modalError');
 const dimissX = document.getElementById('dimissX');
-const animationBox = document.querySelector('#animationBox');
+const dimissXerror = document.getElementById('dimissXerror');
+const productList = document.querySelector("#form-list");
+const productInfo = document.querySelector('.product_info');
 
 productList.addEventListener("submit", (event) => {
   event.preventDefault();
   const productSelected = document.querySelector('input[name="product"]:checked');
+
   if (productSelected) {
     const product = productSelected.value;
     selected = product;
-    modalOverlay.classList.remove('modal-hidden');
+
     historicProduct.push(product);
+    modalSucess.classList.remove('modal-hidden');
+    modalError.classList.add('modal-hidden');
+    productInfo.classList.add('modal-hidden');
+
+    setTimeout(() => {
+      closeDialog();
+    }, 5000);
+
   } else {
-    alert("Por favor, selecione um produto antes de enviar.");
-  }
+    modalError.classList.remove('modal-hidden');
+    modalSucess.classList.add('modal-hidden');
+  };
 });
 
 function closeDialog() {
-  modalOverlay.classList.add('modal-hidden');
+  modalSucess.classList.add('modal-hidden');
+  modalError.classList.add('modal-hidden');
 };
+
+dimissX.addEventListener('click', closeDialog);
+dimissXerror.addEventListener('click', closeDialog);
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' || event.keyCode === 27) {
@@ -29,10 +45,8 @@ window.addEventListener('keydown', (event) => {
   };
 });
 
-dimissX.addEventListener('click', closeDialog);
-
-modalOverlay.addEventListener('click', (event) => {
-  if (event.target === modalOverlay) {
+modalSucess.addEventListener('click', (event) => {
+  if (event.target === modalSucess) {
     closeDialog();
   };
 });
