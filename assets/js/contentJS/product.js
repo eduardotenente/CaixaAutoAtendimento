@@ -1,6 +1,10 @@
 // Product Section
-export let selected = null;
-export const historicProduct = [];
+import { checkSelectedProduct } from "../utilities/productsValue.js";
+
+let selected = null;
+let modalTimer = null;
+const historicProduct = [];
+
 const modalSucess = document.getElementById('modalSucess');
 const modalError = document.getElementById('modalError');
 const dimissX = document.getElementById('dimissX');
@@ -15,15 +19,17 @@ productList.addEventListener("submit", (event) => {
   if (productSelected) {
     const product = productSelected.value;
     selected = product;
-
     historicProduct.push(product);
+    checkSelectedProduct();
+
     modalSucess.classList.remove('modal-hidden');
     modalError.classList.add('modal-hidden');
     productInfo.classList.add('modal-hidden');
 
-    setTimeout(() => {
+    clearTimeout(modalTimer);
+    modalTimer = setTimeout(() => {
       closeDialog();
-    }, 5000);
+    }, 4000);
 
   } else {
     modalError.classList.remove('modal-hidden');
@@ -31,9 +37,12 @@ productList.addEventListener("submit", (event) => {
   };
 });
 
+export { selected };
+
 function closeDialog() {
   modalSucess.classList.add('modal-hidden');
   modalError.classList.add('modal-hidden');
+  clearTimeout(modalTimer);
 };
 
 dimissX.addEventListener('click', closeDialog);

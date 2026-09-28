@@ -1,10 +1,4 @@
 import './header/date.js';
 import './contentJS/product.js';
 import './contentJS/select.js';
-import './calcJS/calc.js';
-import './contentJS/discount.js';
-import './contentJS/resume.js';
-import './contentJS/details.js';
 import './utilities/productsValue.js';
-import './utilities/noEvent.js';
-import './utilities/scroll.js';

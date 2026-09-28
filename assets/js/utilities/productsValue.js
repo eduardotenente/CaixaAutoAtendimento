@@ -1,22 +1,27 @@
-// import { selected } from './../contentJS/product';
+import { selected } from "./../contentJS/product.js";
 
-export const products = [ 
+const products = [ 
     { name: "refrigerante", price: 4.00, image: "././media/images/icons/refrigerante.png" }, 
     { name: "água", price: 3.50, image: "././media/images/icons/agua.png" },
     { name: "biscoito", price: 5.00, image: "././media/images/icons/biscoitos.png" }, 
     { name: "chocolate", price: 10.00, image: "././media/images/icons/chocolate.png" },
-    { name: "sorvete", price: 3.00, image: "././media/images/icons/casquinha.png" },
+    { name: "sorvete", price: 3.00, image: "././media/images/icons/casquinha.png" }
 ];
 
-;(function(){
-    /*
-     De acordo com o produto selecionado, guarde a descrição e valor do produto
-     separadamente em uma variável para exportar para o arquivo details.
-    */
-   for(let pos in products) { 
-       if(selected.value == products[pos].name && selected.value == products[pos].price) {
-         const unitValue = products[pos].price; // EXPORTE para select.js | resume.js
-         const productName = products[pos].name; // EXPORTE para select.js | resume.js
-       };
-   }
-})()
+let unitValue = 0;
+let productName = "";
+let productImage = "";
+
+export function checkSelectedProduct() {
+    products.forEach((product) => {
+        if (selected && selected.toLowerCase() === product.name.toLowerCase()) {
+            unitValue = product.price; 
+            productName = product.name; 
+            productImage = product.image;
+
+            console.log(`Sucesso! Você escolheu ${productName} por R$ ${unitValue}`);
+        }
+    });
+};
+
+export { unitValue, productName, productImage };

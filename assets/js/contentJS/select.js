@@ -1,4 +1,3 @@
-const selectedInfo = document.querySelector('.product-info-selected');
+import { unitValue, productName, productImage } from "./../utilities/productsValue.js";
 
-// IMPORTE ProductName
-// IMPORTE unitValue
+const selectedInfo = document.querySelector('.product-info-selected');
