@@ -34,6 +34,10 @@ productList.addEventListener("submit", (event) => {
   } else {
     modalError.classList.remove('modal-hidden');
     modalSucess.classList.add('modal-hidden');
+    clearTimeout(modalTimer);
+    modalTimer = setTimeout(() => {
+      closeDialog();
+    }, 5000);
   };
 });
 
