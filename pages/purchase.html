@@ -71,41 +71,41 @@
         </section>
 
         <section id="product-section" class="animate-entryLeft">
-            <aside class="title_container">
+            <aside id="title-product" class="title_container">
                 <img src="../assets/media/images/icons/caixa.png" class="icon-section" alt="Caixa">
                 <h3>Nossos Produtos</h3>
             </aside>
             <form id="form-list">
                 
-                 <label class="product-option" for="product-1">
+                 <label class="product-option fade-1" for="product-1">
                      <input type="radio" name="product" id="product-1" value="Refrigerante" class="product-item">
                      <img src="../assets/media/images/icons/refrigerante.png" alt="">
                      <span class="product-option__name">Refrigerante</span>
                      <span class="product-option__name">(R$ 4,00)</span>
                  </label>
                  
-                 <label class="product-option" for="product-2">
+                 <label class="product-option fade-2" for="product-2">
                      <input type="radio" name="product" id="product-2" value="Água" class="product-item">
                      <img src="../assets/media/images/icons/agua.png" alt="">
                      <span class="product-option__name">Água</span>
                      <span class="product-option__name">(R$ 3,50)</span>
                  </label>
                  
-                 <label class="product-option" for="product-3">
+                 <label class="product-option fade-3" for="product-3">
                      <input type="radio" name="product" id="product-3" value="Biscoito" class="product-item">
                      <img src="../assets/media/images/icons/biscoitos.png" alt="">
                      <span class="product-option__name">Biscoito</span>
                      <span class="product-option__name">(R$ 5,00)</span>
                  </label>
                  
-                 <label class="product-option" for="product-4">
+                 <label class="product-option fade-4" for="product-4">
                      <input type="radio" name="product" id="product-4" value="Chocolate" class="product-item">
                      <img src="../assets/media/images/icons/chocolate.png" alt="">
                      <span class="product-option__name">Chocolate</span>
                      <span class="product-option__name">(R$ 10,00)</span>
                  </label>
                  
-                 <label class="product-option" for="product-5">
+                 <label class="product-option fade-5" for="product-5">
                      <input type="radio" name="product" id="product-5" value="Sorvete" class="product-item">
                      <img src="../assets/media/images/icons/casquinha.png" alt="">
                      <span class="product-option__name">Sorvete</span>
@@ -124,26 +124,31 @@
         </section>
 
         <section id="select-section" class="animate-entryLeft">
-            <aside class="title_container">
+            <aside id="title-select" class="title_container">
                 <img src="../assets/media/images/icons/selecionado.png" alt="Selecionado" class="icon-section">
                 <h3>Produto Selecionado</h3>
             </aside>
-            <aside class="default">
-                <img src="../assets/media/images/icons/carrinho.svg" alt="Carrinho de compras">
-                <p>Nenhum produto selecionado.</p>
+            <aside id="default-select" class="default">
+                <div class="default_bg">
+                    <img class="default_icon" src="../assets/media/images/icons/carrinho.svg" alt="Carrinho de compras">
+                </div>
+                <h3>Nenhum produto selecionado.</h3>
                 <p>Escolha um produto da lista.</p>
             </aside>
-            <aside id="product-select">
+            <aside id="product-select" class="hidden">
                 <div class="product-info-selected">
-                    <!-- ICONE PRODUTO -->
-                    <p>
+                    <div id="product-img">
+                        <img id="selected-image"><!-- ICONE PRODUTO --></img>
+                    </div>
+                    <div class="info_item">
                         <span class="product-name"></span>
                         <span class="product-price"></span>
-                    </p>
+                    </div>
                 </div>
                 <form id="calculator-form">
-                    <label for="product-quantity">Quantidade:</label>
-                    <input type="number" id="product-quantity" class="quantity" name="quantity" min="1" required>
+                    <label for="product-quantity">
+                        Quantidade <input type="number" id="product-quantity" class="quantity" name="quantity" min="1" max="100" required>
+                    </label>
                     <button type="submit" id="calc-button" class="button">
                         <span class="button__text">Calcular</span>
                         <span class="button__icon"><img src="../assets/media/images/icons/calcular.png" alt="calcular" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></span>
@@ -158,8 +163,8 @@
                 <h3>Desconto</h3>
             </aside>
             <aside class="default">
-                <img src="../assets/media/images/icons/informacao-azul.png" alt="Informação">
-                <p>Nenhum desconto aplicado.</p>
+                <div class="default_bg"><img class="default_icon" src="../assets/media/images/icons/informacao-azul.png" alt="Informação"></div>
+                <h3>Nenhum desconto aplicado.</h3>
                 <p>Escolha um produto da lista e clique em "calcular" para ver o desconto.</p>
             </aside>
             <aside id="discount-content">
@@ -177,8 +182,8 @@
                 <h3>Resumo da Compra</h3>
             </aside>
             <aside class="default">
-                <img src="../assets/media/images/icons/carrinho.svg" alt="carrinho de compras">
-                <p>Nenhum produto calculado.</p>
+                <div class="default_bg"><img class="default_icon" src="../assets/media/images/icons/carrinho.svg" alt="carrinho de compras"></div>
+                <h3>Nenhum produto calculado.</h3>
                 <p>Escolha um produto da lista e clique em "calcular" para ver o resumo.</p>
             </aside>
             <table id="resume-table">
@@ -259,8 +264,8 @@
                 <h3>Detalhes do Pagamento</h3>
             </aside>
             <aside class="default">
-                <img src="../assets/media/images/icons/carrinho.svg" alt="Carrinho de compras">
-                <p>Nenhum pagamento realizado.</p>
+                <div class="default_bg"><img class="default_icon" src="../assets/media/images/icons/carrinho.svg" alt="Carrinho de compras"></div>
+                <h3>Nenhum pagamento realizado.</h3>
                 <p>Compre um produto para ver os detalhes do pagamento.</p>
             </aside>
             <aside id="details-content">

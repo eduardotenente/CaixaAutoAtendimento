@@ -6,6 +6,11 @@
     min-height: 400px;
 }
 
+#title-product {
+    width: 95%;
+    margin-left: 5%;
+}
+
 #form-list {
     display: flex;
     flex-flow: column nowrap;
@@ -24,7 +29,6 @@
     padding: 0.5rem 0.75rem;
     text-align: left;
     cursor: pointer;
-    
 }
 
 .product-item {

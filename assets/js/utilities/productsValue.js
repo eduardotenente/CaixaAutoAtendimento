@@ -1,27 +1,29 @@
 import { selected } from "./../contentJS/product.js";
+import { soda, water, cookie, chocolate, iceCream } from "./base64.js";
 
 const products = [ 
-    { name: "refrigerante", price: 4.00, image: "././media/images/icons/refrigerante.png" }, 
-    { name: "água", price: 3.50, image: "././media/images/icons/agua.png" },
-    { name: "biscoito", price: 5.00, image: "././media/images/icons/biscoitos.png" }, 
-    { name: "chocolate", price: 10.00, image: "././media/images/icons/chocolate.png" },
-    { name: "sorvete", price: 3.00, image: "././media/images/icons/casquinha.png" }
+    { name: "Refrigerante", price: 4.00, image: soda }, 
+    { name: "Água", price: 3.50, image: water },
+    { name: "Biscoito", price: 5.00, image: cookie }, 
+    { name: "Chocolate", price: 10.00, image: chocolate },
+    { name: "Sorvete", price: 3.00, image: iceCream }
 ];
 
-let unitValue = 0;
-let productName = "";
-let productImage = "";
+export let formatBrl = '';
+export let unitValue = 0;
+export let productName = "";
+export let productImage = "";
 
 export function checkSelectedProduct() {
     products.forEach((product) => {
-        if (selected && selected.toLowerCase() === product.name.toLowerCase()) {
-            unitValue = product.price; 
+        if (selected && selected === product.name) {
+            formatBrl = new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            }).format(product.price); 
+            unitValue = product.price;
             productName = product.name; 
             productImage = product.image;
-
-            console.log(`Sucesso! Você escolheu ${productName} por R$ ${unitValue}`);
-        }
+        };
     });
 };
-
-export { unitValue, productName, productImage };

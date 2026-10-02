@@ -1,9 +1,10 @@
-// Product Section
+// PRODUCT SECTION e PRODUTO SELECIONADO (mostrar elementos) 
+
 import { checkSelectedProduct } from "../utilities/productsValue.js";
+import { showCalculator } from "./select.js";
 
 let selected = null;
 let modalTimer = null;
-const historicProduct = [];
 
 const modalSucess = document.getElementById('modalSucess');
 const modalError = document.getElementById('modalError');
@@ -19,17 +20,18 @@ productList.addEventListener("submit", (event) => {
   if (productSelected) {
     const product = productSelected.value;
     selected = product;
-    historicProduct.push(product);
     checkSelectedProduct();
 
     modalSucess.classList.remove('modal-hidden');
     modalError.classList.add('modal-hidden');
     productInfo.classList.add('modal-hidden');
-
+    
     clearTimeout(modalTimer);
     modalTimer = setTimeout(() => {
       closeDialog();
     }, 4000);
+
+    showCalculator();
 
   } else {
     modalError.classList.remove('modal-hidden');
@@ -40,8 +42,6 @@ productList.addEventListener("submit", (event) => {
     }, 5000);
   };
 });
-
-export { selected };
 
 function closeDialog() {
   modalSucess.classList.add('modal-hidden');
@@ -64,4 +64,4 @@ modalSucess.addEventListener('click', (event) => {
   };
 });
 
-// EXPORTE o produto selecionado para o arquivo select.js | productsValue.js
+export { selected };

@@ -9,16 +9,18 @@ const navData = document.querySelector('#nav-data');
 
 if (hour < 10 && minutes < 10) {
     navData.innerHTML = `<p style="font-size: 1.2rem;">0${hour}:0${minutes}</p>`;
-} else if(hour < 10 && minutes > 10){
+} else if(hour < 10 && minutes >= 10){
     navData.innerHTML = `<p style="font-size: 1.2rem;">0${hour}:${minutes}</p>`;
-} else if(hour > 10 && minutes < 10) {
+} else if(hour >= 10 && minutes < 10) {
     navData.innerHTML = `<p style="font-size: 1.2rem;">${hour}:0${minutes}</p>`;
-} else if(hour > 10 && minutes > 10){
+} else if(hour >= 10 && minutes >= 10){
     navData.innerHTML = `<p style="font-size: 1.2rem;">${hour}:${minutes}</p>`;
 };
 
-if (month < 10) {
+if (day < 10 &&month < 10) {
+    navData.innerHTML += `<p style="font-size: 0.9rem;">0${day}/0${month}/${year}</p>`;
+} else if(day >= 10 && month < 10){
     navData.innerHTML += `<p style="font-size: 0.9rem;">${day}/0${month}/${year}</p>`;
-} else {
-    navData.innerHTML += `<p style="font-size: 0.9rem;">${day}/${month}/${year}</p>`;
+} else if(day < 10 && month >= 10) {
+    navData.innerHTML += `<p style="font-size: 0.9rem;">0${day}/${month}/${year}</p>`;
 };
