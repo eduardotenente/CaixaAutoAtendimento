@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+}
+
+.exit-button, 
+.exit-button .button__icon,
+.button:active .button__icon,
+.button:active {
+    background-color: var(--text-muted);
+    border-color: var(--text-muted);
+    &:hover {
+        background-color: var(--text-muted);
+    }
+}
