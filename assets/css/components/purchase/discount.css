@@ -1,0 +1,103 @@
+#discount-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;              
+    align-items: center;
+    width: 98.9vw;
+    height: 100dvh;
+    background-color: var(--shadow-popup); 
+    box-shadow: 0px 50vh 100px 100vh var(--shadow-popup); 
+    z-index: 9999;  
+    animation: scale-in-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#discount-content {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.212);
+    overflow: hidden;
+}
+
+.card {
+  max-width: 320px;
+  border-width: 1px;
+  border-color: rgba(219, 234, 254, 1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+}
+
+.alert {
+  font-weight: 600;
+}
+
+.message {
+  margin-top: 1rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+}
+
+.actions a {
+  text-decoration: none;
+}
+
+.mark-as-read,
+.read {
+  display: inline-block;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.read {
+  background-color: rgba(59, 130, 246, 1);
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.mark-as-read {
+  margin-top: 0.5rem;
+  background-color: rgba(249, 250, 251, 1);
+  color: rgba(107, 114, 128, 1);
+  transition: all .15s ease;
+}
+
+.mark-as-read:hover {
+  background-color: rgb(230, 231, 233);
+}
+
+#close-discount-message {
+    background-color: transparent;
+    color: rgba(107, 114, 128, 1);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    &:hover {
+        background-color: rgb(230, 231, 233);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #discount-section {
+        margin: auto;
+        top: 35%;
+    }
+}

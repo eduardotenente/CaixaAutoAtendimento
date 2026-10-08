@@ -163,31 +163,32 @@
             </aside>
         </section>
 
-        <section id="discount-section" class="animate-entryLeft">
-            <aside class="title_container">
-                <img src="../assets/media/images/icons/mensagem.png" alt="Mensagem" class="icon-section">
-                <h3>Desconto</h3>
-            </aside>
+        <section id="discount-section" class="hidden">
             <aside id="discount-default" class="default">
                 <div class="default_bg"><img class="default_icon" src="../assets/media/images/icons/informacao-azul.png" alt="Informação"></div>
                 <h3>Nenhum desconto aplicado.</h3>
                 <p>Escolha um produto da lista e clique em "calcular" para ver o desconto.</p>
             </aside>
             <aside id="discount-content" class="hidden">
-                <img id="alertIcon"><!-- ICONE --></img>
-                 <div>
-                    <h4 id="situation-title"></h4>
-                    <p id="situation-info"></p>
-                 </div>
-            </aside>
-            <aside id="discount-info" class="hidden">
-                <div>
-                    <h4>Valor do desconto:</h4>
-                    <p id="info-value"></p>
-                </div>
-                <div>
-                    <h4>Novo preço: </h4>
-                    <p id="new-price"></p>
+                <div class="card">
+                    <div class="header">
+                        <img id="alertIcon"><!-- ICONE --></img>
+                        <h4 id="situation-title" class="alert">
+                            <!-- SITUAÇÃO -->
+                        </h4>
+                    </div>
+                    <p id="situation-info" class="message">
+                        <!-- MENSAGEM -->
+                    </p>
+                    <div class="actions">
+                        <a class="read" href="#product-quantity" target="_self" rel="internal">
+                        Dar uma olhada
+                        </a>
+
+                        <a class="mark-as-read" href="#resume-section" target="_self" rel="internal">
+                            <button type="button" id="close-discount-message"></button>
+                        </a>
+                    </div>
                 </div>
             </aside>
         </section>

@@ -9,7 +9,7 @@ import {
     
 import {
      calculateDiscount, 
-     discountContainer, 
+     discountContainer,
      defaultDiscount, 
      showMessage 
 } from "./discount.js";

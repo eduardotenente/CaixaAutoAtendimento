@@ -9,10 +9,12 @@
 @import url('components/purchase/welcome-purchase.css');
 @import url('components/purchase/product-section.css');
 @import url('components/purchase/select-purchase.css');
+@import url('components/purchase/discount.css');
 
 /* CSS da Interface de Usuário */
 @import url('ui/purchase-ui/buttonCalc.css');
 @import url('ui/purchase-ui/buttonPay.css');
+@import url('ui/purchase-ui/exitButton.css');
 @import url('ui/purchase-ui/icons-purchase.css');
 @import url('ui/purchase-ui/images-purchase.css');
 @import url('ui/purchase-ui/pop-up.css');

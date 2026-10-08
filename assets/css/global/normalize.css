@@ -7,6 +7,7 @@
 
 html, body {
     scroll-behavior: smooth;
+    scroll-padding-top: 200px;
 }
 
 body {
@@ -48,7 +49,6 @@ p {
 #welcome-section,
 #product-section,
 #select-section,
-#discount-section,
 #resume-section,
 #details-section,
 #flow-section {
@@ -95,4 +95,24 @@ p {
 
 .hidden {
     display: none !important;
+}
+
+.atDiscount {
+    --atD-borderMessage-color: rgba(6, 161, 6, 0.705);
+    --atD-bgMessage-color: rgb(182, 221, 182);
+    background-color: var(--atD-bgMessage-color);
+    color: var(--atD-borderMessage-color);
+    border: 2px solid var(--atD-borderMessage-color);
+}
+
+.noDiscount {
+    --nD-borderMessage-color: rgba(59, 131, 246, 0.705);
+    --nD-bgMessage-color: rgb(183, 198, 224);
+    background-color: var(--nD-bgMessage-color);
+    color: var(--nD-borderMessage-color);
+    border: 2px solid var(--nD-borderMessage-color);
+}
+
+.error {
+    border: 2px solid red;
 }

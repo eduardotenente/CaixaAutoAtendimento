@@ -19,8 +19,12 @@ import { Discount, noDiscount, errorDiscount } from "./../utilities/base64.js";
  
 const defaultDiscount = document.querySelector('#discount-default');
 const discountContainer = document.querySelector('#discount-content');
+const discountSection = document.querySelector('#discount-section');
 const situationTitle = document.querySelector('#situation-title');
 const situationInfo = document.querySelector('#situation-info');
+const closeBoxTypeBack = document.querySelector('.read');
+const closeBoxTypeContinue = document.querySelector('.mark-as-read');
+const closeDiscountMessage = document.querySelector('#close-discount-message');
 let alertIcon = document.querySelector('#alertIcon');
 let porcentMessage = "";
 
@@ -53,23 +57,51 @@ function calculateDiscount() {
 };
 
 function showMessage() {
+
     if(discountValue == 0) {
+        discountSection.classList.remove('hidden');
+        discountContainer.classList.remove('atDiscount');
+        discountContainer.classList.add('noDiscount');
+
         alertIcon.src = noDiscount;
         alertIcon.alt = "Sem desconto";
-        situationTitle.textContent = "Compra sem desconto";
-        situationInfo.textContent = "A quantidade de produtos selecionados não é suficiente para aplicar um desconto. Adicione mais produtos iguais ou diferentes para obter descontos.";
+
+        situationTitle.textContent = "Compra sem desconto!";
+        situationInfo.textContent = "A quantidade de produtos selecionados não é suficiente para aplicar um desconto. Adicione mais produtos para obter descontos.";
+        closeDiscountMessage.textContent = "Continuar sem desconto";
+
     } else if(discountValue >= 2) {
+        discountSection.classList.remove('hidden');
+        discountContainer.classList.remove('noDiscount');
+        discountContainer.classList.add('atDiscount');
+
         alertIcon.src = Discount;
         alertIcon.alt = "Desconto aplicado";
+
         situationTitle.textContent = "Desconto aplicado!";
-        situationInfo.textContent = `Sua compra se enquadra nas condições de desconto e ganhará um desconto de ${discountValue.toFixed(2)} reais. O novo valor da compra é: ${newValue.toFixed(2)} reais.`;
+        situationInfo.textContent = `Sua compra se enquadra nas condições de desconto e ganhará um desconto!`;
+        closeDiscountMessage.textContent = "Continuar";
+
     } else if (discountValue < 0) {
+        discountSection.classList.remove('hidden');
+        discountContainer.classList.remove('noDiscount', 'atDiscount');
+        discountContainer.classList.add('error');
+
         alertIcon.src = errorDiscount;
         alertIcon.alt = "Erro no cálculo do desconto";
+
         situationTitle.textContent = "Erro no cálculo do desconto";
         situationInfo.textContent = "Ocorreu um erro no cálculo do desconto. Por favor, verifique os valores e tente novamente.";
+        closeDiscountMessage.style.display = 'none';
     }
 };
+
+function closeDiscount() {
+    discountSection.classList.add('hidden');
+};
+
+closeBoxTypeContinue.addEventListener('click', closeDiscount);
+closeBoxTypeBack.addEventListener('click', closeDiscount);
 
 export { 
     discountContainer,
