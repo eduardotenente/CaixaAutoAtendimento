@@ -1,0 +1,71 @@
+#resume-section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+#resume-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+}
+
+.resume-table {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+th, td {
+    text-align: center;
+    padding: 12px 15px;
+}
+
+thead tr {
+    background-color: #009879;   /* Cor de fundo principal */
+    color: #ffffff;              /* Cor do texto */
+    text-align: left;            /* Alinhamento à esquerda */
+    font-weight: bold;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+#pay-container {
+    margin: auto;
+}
+
+#pay-container h3 {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+@media screen and (min-width: 1215px) {
+    #resume-container {
+        width: 300px;
+    }
+}

@@ -28,25 +28,26 @@ const closeDiscountMessage = document.querySelector('#close-discount-message');
 let alertIcon = document.querySelector('#alertIcon');
 let porcentMessage = "";
 
-const porcent10 = 0.10 * 10;
-const porcent15 = 0.15 * 10;
-const porcent25 = 0.25 * 10;
-const porcent35 = 0.35 * 10;
+const porcent10 = 0.10;
+const porcent15 = 0.15;
+const porcent25 = 0.25;
+const porcent35 = 0.35;
 let discountValue = 0;
 let newValue = 0; 
 
 function calculateDiscount() {
+    discountValue = 0;
     if(quantity == 2) {
-        discountValue = quantity * porcent10;
+        discountValue = Value * porcent10;
         porcentMessage = "10%";
     } else if (quantity == 3) {
-        discountValue = quantity * porcent15;
+        discountValue = Value * porcent15;
         porcentMessage = "15%";
     } else if (quantity >= 4 && quantity <= 6) {
-        discountValue = quantity * porcent25;
+        discountValue = Value * porcent25;
         porcentMessage = "25%";
     } else if (quantity >= 7) {
-        discountValue = quantity * porcent35;
+        discountValue = Value * porcent35;
         porcentMessage = "35%";
     } else if(quantity < 2) { 
         discountValue = 0;
@@ -70,7 +71,7 @@ function showMessage() {
         situationInfo.textContent = "A quantidade de produtos selecionados não é suficiente para aplicar um desconto. Adicione mais produtos para obter descontos.";
         closeDiscountMessage.textContent = "Continuar sem desconto";
 
-    } else if(discountValue >= 2) {
+    } else if(quantity >= 2) {
         discountSection.classList.remove('hidden');
         discountContainer.classList.remove('noDiscount');
         discountContainer.classList.add('atDiscount');

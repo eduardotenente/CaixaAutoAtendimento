@@ -35,24 +35,38 @@ const resumeQuantity = document.querySelector('.resume_quantity');
 const productTotal = document.querySelector('#product-total');
 const subTotalMessage = document.querySelector('#subtotal'); 
 const totalMessage = document.querySelector('#total');
-const discountMessage = document.querySelectorAll('.discount'); 
-const discountValueMessage = document.querySelector('.discount_text');
+const discountMessage = document.querySelectorAll('.discount_text'); 
+const porcent = porcentMessage;
+const discountValueMessage = document.querySelector('.discount_value');
 const payButton = document.querySelector('#pay-button');
 
 let totalValue = 0;
-let subTotalValue = 0
+let subTotalValue = 0;
+
+function covertForReal(valueR$) {
+    const num = Number(valueR$);
+
+    if (isNaN(num)) {
+        return "Valor inválido";
+    }
+
+    return new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    }).format(num);
+};
 
 function showResume() {
     totalValue = newValue;
     resumePName.textContent = productName;
-    resumePPrice.textContent = `R$ ${unitValue}`;
+    resumePPrice.textContent = covertForReal(unitValue);
     resumeQuantity.textContent = quantity; 
-    productTotal.textContent = `R$ ${Value}`;
-    subTotalValue = Value
-    subTotalMessage.textContent = `R$ ${Value}`;
-    discountMessage.textContent = `Desconto (${porcentMessage})`;
-    discountValueMessage.textContent = `- R$ ${discountValue}`;
-    totalMessage.textContent = totalValue;
+    productTotal.textContent = covertForReal(Value);
+    subTotalValue = covertForReal(Value);
+    subTotalMessage.textContent = covertForReal(Value);
+    discountMessage.textContent = porcent;
+    discountValueMessage.textContent = `- ${covertForReal(discountValue)}`;
+    totalMessage.textContent = covertForReal(totalValue);
 };
 
 payButton.addEventListener('click', (event) => {
