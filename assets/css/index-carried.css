@@ -1,0 +1,15 @@
+/* CSS de Configurações Globais */
+@import url('global/normalize.css');
+@import url('global/variables.css');
+@import url('global/font.css');
+
+/* CSS das Seções de Compra Realizada */
+@import url('components/carriedOut/details-carriedOut.css');
+@import url('components/carriedOut/flow-carriedOut.css');
+
+/* CSS da Interface de usuário de Compra Realizada */
+@import url('ui/purchase-ui/exitButton.css');
+@import url('ui/purchase-ui/icons-purchase.css');
+
+/* CSS das Animações */
+@import url(global/animation.css);

@@ -69,7 +69,7 @@ function showResume() {
     totalMessage.textContent = covertForReal(totalValue);
 };
 
-payButton.addEventListener('click', (event) => {
+/* payButton.addEventListener('click', (event) => {
     event.preventDefault();
 
     defaultDetails.classList.add('hidden');
@@ -77,7 +77,7 @@ payButton.addEventListener('click', (event) => {
     showDetails();
 
     flowContainer.classList.remove('hidden');
-});
+}); */ 
 
 export { 
     defaultResume,

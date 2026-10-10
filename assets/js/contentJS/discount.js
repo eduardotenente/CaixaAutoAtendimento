@@ -31,7 +31,7 @@ let porcentMessage = "";
 const porcent10 = 0.10;
 const porcent15 = 0.15;
 const porcent25 = 0.25;
-const porcent35 = 0.35;
+const porcent35 = 0.30;
 let discountValue = 0;
 let newValue = 0; 
 

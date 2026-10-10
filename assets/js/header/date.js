@@ -23,4 +23,6 @@ if (day < 10 &&month < 10) {
     navData.innerHTML += `<p style="font-size: 0.9rem;">${day}/0${month}/${year}</p>`;
 } else if(day < 10 && month >= 10) {
     navData.innerHTML += `<p style="font-size: 0.9rem;">0${day}/${month}/${year}</p>`;
+} else if(day == 10 && month == 10) {
+    navData.innerHTML += `<p style="font-size: 0.9rem;">${day}/${month}/${year}</p>`;
 };

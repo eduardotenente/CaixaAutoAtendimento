@@ -1,1 +1,0 @@
-const defaultContent = document.querySelectorAll('.default');

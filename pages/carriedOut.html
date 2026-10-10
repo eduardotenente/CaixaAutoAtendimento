@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Realizada!</title>
+    <link rel="stylesheet" href="../assets/css/index-carried.css">
+    <script type="module" src="../assets/js/main.js"></script>
+</head>
+<body>
+    <main id="main-carried" class="animate-entry">
+        <section id="details-section" class="animate-entryLeft">
+            <aside class="title_container">
+                <img src="../assets/media/images/icons/detalhes.png" alt="Detalhes do Pagamento" class="icon-section">
+                <h3>Detalhes do Pagamento</h3>
+            </aside>
+            <aside id="default-details" class="default">
+                <div class="default_bg"><img class="default_icon" src="../assets/media/images/icons/carrinho.svg" alt="Carrinho de compras"></div>
+                <h3>Nenhum pagamento realizado.</h3>
+                <p>Compre um produto para ver os detalhes do pagamento.</p>
+            </aside>
+            <aside id="details-content" class="hidden">
+                <div class="details-subcontainer">
+                    <p>
+                        Itens comprados: 
+                        <span id="items-element">0</span>
+                    </p>
+                    <p>
+                        Valor do Desconto: 
+                        <span id="discount-value">0,00</span>
+                    </p>
+                </div>
+                <div class="subcontainer">
+                    <p>
+                        Subtotal:
+                        <span id="sub-element">0,00</span>
+                    </p>
+                    <p>
+                        Valor Total:
+                        <span id="total-element">0,00</span>
+                    </p>
+                </div>
+            </aside>
+        </section>
+
+        <section id="flow-section" class="animate-entryLeft hidden">
+            <aside id="flow-info">
+                <img src="../assets/media/images/icons/repetir.png" alt="Repetir Compra" >
+                 <h3>Deseja realizar uma nova compra?</h3>
+                 <p>Você pode continuar comprando sem precisar recarregar a página.</p>
+            </aside>
+            <aside class="buttons-flow">
+                <a href="#product-section" target="_self" rel="internal">
+                    <button type="button" id="new-purchase" class="button">
+                        <span class="button__text">Nova Compra</span>
+                        <span class="button__icon"><img src="../assets/media/images/icons/carrinho.svg" alt="carrinho de compras" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></span>
+                    </button>
+                </a>
+                <a href="../index.html" target="_self" rel="internal">
+                    <button type="button" class="button exit-button">
+                        <span class="button__text">Sair</span>
+                        <span class="button__icon"><img src="../assets/media/images/icons/saida.png" alt="Sair" width="24" height="24"></span>
+                    </button>
+                </a>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>
