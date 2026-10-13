@@ -16,16 +16,6 @@ import {
     porcentMessage 
 } from "./discount.js";
 
-import {
-    defaultDetails,
-    detailsContainer,
-    showDetails
-} from "./details.js";
-
-import {
-    flowContainer
-} from "./flow.js";
-
 const defaultResume = document.querySelector('#default-resume');
 const resumeContainer = document.querySelector('#resume-container');
 
