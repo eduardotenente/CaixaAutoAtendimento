@@ -28,7 +28,6 @@ const totalMessage = document.querySelector('#total');
 const discountMessage = document.querySelectorAll('.discount_text'); 
 const porcent = porcentMessage;
 const discountValueMessage = document.querySelector('.discount_value');
-const payButton = document.querySelector('#pay-button');
 
 let totalValue = 0;
 let subTotalValue = 0;
@@ -59,20 +58,11 @@ function showResume() {
     totalMessage.textContent = covertForReal(totalValue);
 };
 
-/* payButton.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    defaultDetails.classList.add('hidden');
-    detailsContainer.classList.remove('hidden');
-    showDetails();
-
-    flowContainer.classList.remove('hidden');
-}); */ 
-
 export { 
     defaultResume,
     resumeContainer,
     showResume,
+    covertForReal,
     subTotalValue,
     totalValue
  };

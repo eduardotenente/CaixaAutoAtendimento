@@ -22,8 +22,8 @@ const discountContainer = document.querySelector('#discount-content');
 const discountSection = document.querySelector('#discount-section');
 const situationTitle = document.querySelector('#situation-title');
 const situationInfo = document.querySelector('#situation-info');
-const closeBoxTypeBack = document.querySelector('.read');
-const closeBoxTypeContinue = document.querySelector('.mark-as-read');
+const closeBoxTypeContinue = document.getElementById('continue-button');
+const closeBoxTypeBack = document.getElementById('back-button');
 const closeDiscountMessage = document.querySelector('#close-discount-message');
 let alertIcon = document.querySelector('#alertIcon');
 let porcentMessage = "";
@@ -101,8 +101,13 @@ function closeDiscount() {
     discountSection.classList.add('hidden');
 };
 
-closeBoxTypeContinue.addEventListener('click', closeDiscount);
-closeBoxTypeBack.addEventListener('click', closeDiscount);
+if (closeBoxTypeContinue) {
+    closeBoxTypeContinue.addEventListener('click', closeDiscount);
+}
+
+if (closeBoxTypeBack) {
+    closeBoxTypeBack.addEventListener('click', closeDiscount);
+}
 
 export { 
     discountContainer,

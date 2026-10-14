@@ -1,17 +1,6 @@
 // DETALHES DA COMPRA 
 
-import {
-    quantity
-} from "./select.js";
-
-import {
-    discountValue
-} from "./discount.js";
-
-import {
-    totalValue,
-    subTotalValue
-} from "./resume.js";
+import { covertForReal } from "./resume.js";
 
 const defaultDetails = document.querySelector('#default-details');
 const detailsContainer = document.querySelector('#details-content');
@@ -21,14 +10,24 @@ const subElement = document.querySelector('#sub-element');
 const totalElement = document.querySelector('#total-element');
 
 function showDetails() {
-    itemsElement.textContent = quantity;
-    discountElement.textContent = `R$ ${discountValue}`;
-    subElement.textContent = `R$ ${subTotalValue}`;
-    totalElement.textContent = `R$ ${totalValue}`;
+    // Recupera e converte os dados salvos
+    const savedData = JSON.parse(localStorage.getItem('purchaseData'));
+
+    if (!savedData) {
+        console.warn('Nenhum dado de compra encontrado.');
+        return;
+    }
+
+    if (itemsElement) itemsElement.textContent = savedData.quantity || 0;
+    if (discountElement) discountElement.textContent = covertForReal(savedData.discount) ?? 0;
+    if (subElement) subElement.textContent = covertForReal(savedData.subtotal) ?? 0;
+    if (totalElement) totalElement.textContent = covertForReal(savedData.total) ?? 0;
+
+    defaultDetails.classList.add('hidden');
+    detailsContainer.classList.remove('hidden');
 };
 
-export { 
-    defaultDetails,
-    detailsContainer,
-    showDetails
- };
+
+window.addEventListener('DOMContentLoaded', () => {
+  showDetails();
+});

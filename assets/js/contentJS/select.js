@@ -10,13 +10,16 @@ import {
 import {
      calculateDiscount, 
      discountContainer,
-     defaultDiscount, 
+     defaultDiscount,
+     discountValue, 
      showMessage 
 } from "./discount.js";
 
 import {
     defaultResume,
     resumeContainer,
+    totalValue,
+    subTotalValue,
     showResume
 } from "./resume.js";
 
@@ -30,7 +33,7 @@ let selectedImage = document.querySelector('#selected-image');
 let pName = document.querySelector('.product-name');
 let pPrice = document.querySelector('.product-price');
 let quantity = 0;
-let Value = unitValue;
+let Value = 0;
 
 function showCalculator() {
     defaultSelect.classList.add('hidden');
@@ -39,24 +42,39 @@ function showCalculator() {
     selectedImage.alt = productName;
     pName.innerHTML = `${productName}`;
     pPrice.innerHTML = `${formatBrl}`;
-}
+};
 
-calcForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    quantity = parseInt(quantityInput.value);
-    Value = unitValue * quantity;
-    console.log(Value);
-    console.log(quantity);
-    calculateDiscount();
+if (calcForm) {
+    calcForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const rawQuantity = parseInt(quantityInput.value, 10);
+        quantity = isNaN(rawQuantity) || rawQuantity <= 0 ? 1 : rawQuantity;
+        
+        const numericUnitValue = typeof unitValue === "string" 
+            ? parseFloat(unitValue.replace("R$", "").replace(",", ".").trim()) 
+            : Number(unitValue) || 0;
+
+        Value = numericUnitValue * quantity;
     
-    defaultDiscount.classList.add('hidden');
-    discountContainer.classList.remove('hidden');
-    showMessage();
+        calculateDiscount();
+        
+        defaultDiscount.classList.add('hidden');
+        discountContainer.classList.remove('hidden');
+        showMessage();
+    
+        defaultResume.classList.add('hidden');
+        resumeContainer.classList.remove('hidden');
+        showResume();
 
-    defaultResume.classList.add('hidden');
-    resumeContainer.classList.remove('hidden');
-    showResume();
-});
+        localStorage.setItem('purchaseData', JSON.stringify({
+            quantity,
+            subtotal: Value || subTotalValue,
+            discount: discountValue || 0,
+            total: totalValue || Value
+        }));
+    });
+};
 
 export { 
     defaultSelect,
