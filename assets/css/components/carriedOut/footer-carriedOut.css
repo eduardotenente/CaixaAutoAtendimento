@@ -1,0 +1,26 @@
+footer {
+    max-width: 90%;
+    margin: 5% auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    color: var(--text-muted);
+    border-top: 1px solid var(--text-muted);
+    font-size: 0.8rem;
+}
+
+#footer-box {
+    margin-left: 3%;
+}
+
+.footer_links {
+    margin-right: 3%;
+}
+
+.footer_title {
+    color: var(--subtitle-color);
+    font-weight: bold;
+}
