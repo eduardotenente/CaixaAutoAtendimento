@@ -4,6 +4,7 @@
 @import url('global/font.css');
 
 /* CSS das Seções de Compra Realizada */
+@import url('components/purchase/header-purchase.css');
 @import url('components/carriedOut/details-carriedOut.css');
 @import url('components/carriedOut/flow-carriedOut.css');
 
