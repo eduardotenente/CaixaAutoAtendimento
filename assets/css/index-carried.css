@@ -8,11 +8,10 @@
 @import url('components/purchase/header-purchase.css');
 @import url('components/carriedOut/cardpay-carriedOut.css');
 @import url('components/carriedOut/details-carriedOut.css');
-@import url('components/carriedOut/flow-carriedOut.css');
 @import url('components/carriedOut/footer-carriedOut.css');
 
 /* CSS da Interface de usuário de Compra Realizada */
-@import url('ui/purchase-ui/exitButton.css');
+@import url('ui/carriedOut-ui/closeDetailsButton.css');
 @import url('ui/purchase-ui/icons-purchase.css');
 
 /* CSS das Animações */

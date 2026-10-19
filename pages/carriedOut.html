@@ -7,11 +7,6 @@
     <link rel="shortcut icon" href="../assets/media/favicon/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/index-carried.css">
     <script defer type="module" src="../assets/js/mainCarriedOut.js"></script>
-    <style>
-        .title_container {
-            width: 50%;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -52,6 +47,9 @@
             <aside class="title_container">
                 <img src="../assets/media/images/icons/detalhes.png" alt="Detalhes do Pagamento" class="icon-section">
                 <h3>Detalhes do Pagamento</h3>
+                <div>
+                    <button id="close-details">X</button>
+                </div>
             </aside>
             <aside id="default-details" class="default">
                 <div class="default_bg"><img class="default_icon" src="../assets/media/images/icons/carrinho.svg" alt="Carrinho de compras"></div>
@@ -59,7 +57,11 @@
                 <p>Compre um produto para ver os detalhes do pagamento.</p>
             </aside>
             <aside id="details-content" class="hidden">
-                <div class="details-subcontainer">
+                <div class="details_subcontainer">
+                    <p>
+                        Produto:
+                        <span id="item-name"></span>
+                    </p>
                     <p>
                         Itens comprados: 
                         <span id="items-element">0</span>
@@ -68,9 +70,8 @@
                         Subtotal:
                         <span id="sub-element">0,00</span>
                     </p>
-                    
                 </div>
-                <div class="subcontainer">
+                <div class="details_subcontainer">
                     <p>
                         Valor do Desconto: 
                         <span id="discount-value">0,00</span>

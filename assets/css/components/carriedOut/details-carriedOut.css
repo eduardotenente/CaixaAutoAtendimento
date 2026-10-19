@@ -1,0 +1,22 @@
+#details-section {  
+    width: 300px;
+    min-height: 250px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.details_subcontainer {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    gap: 0.5rem;
+    margin-top: 5%;
+    user-select: none;
+}
+
+.details_subcontainer p {
+    border-bottom: 1px solid var(--text-muted);
+}
