@@ -53,8 +53,6 @@ function calculateDiscount() {
         discountValue = 0;
     }
     newValue = Value - discountValue;
-    console.log(`Desconto aplicado: ${discountValue}`);
-    console.log(`Novo valor: ${newValue}`);
 };
 
 function showMessage() {

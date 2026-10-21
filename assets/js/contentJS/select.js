@@ -71,7 +71,9 @@ if (calcForm) {
             quantity,
             subtotal: Value || subTotalValue,
             discount: discountValue || 0,
-            total: totalValue || Value
+            total: totalValue || Value,
+            name: productName,
+            image: productImage
         }));
     });
 };

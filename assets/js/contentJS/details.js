@@ -3,7 +3,11 @@
 import { covertForReal } from "./resume.js";
 
 const defaultDetails = document.querySelector('#default-details');
-const detailsContainer = document.querySelector('#details-content');
+const detailsContainer = document.querySelector('#details-article');
+const payButton = document.querySelector('#pay-button');
+const closeDetails = document.querySelector('#close-details');
+
+const itemName = document.querySelector('#item-name');
 const itemsElement = document.querySelector('#items-element');
 const discountElement = document.querySelector('#discount-value');
 const subElement = document.querySelector('#sub-element');
@@ -18,16 +22,26 @@ function showDetails() {
         return;
     }
 
+    if (itemName) itemName.textContent = savedData.name ?? "informação não carregada";
     if (itemsElement) itemsElement.textContent = savedData.quantity || 0;
     if (discountElement) discountElement.textContent = covertForReal(savedData.discount) ?? 0;
     if (subElement) subElement.textContent = covertForReal(savedData.subtotal) ?? 0;
     if (totalElement) totalElement.textContent = covertForReal(savedData.total) ?? 0;
-
-    defaultDetails.classList.add('hidden');
-    detailsContainer.classList.remove('hidden');
 };
 
+if (payButton) {
+    payButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        defaultDetails.classList.add('hiddenDetails');
+        detailsContainer.classList.remove('hiddenDetails');
+        showDetails();
+    });
+};
 
-window.addEventListener('DOMContentLoaded', () => {
-  showDetails();
-});
+function isHidden() {
+    detailsContainer.classList.add('hiddenDetails')
+};
+
+if(closeDetails) {
+    closeDetails.addEventListener('click', isHidden)
+};
